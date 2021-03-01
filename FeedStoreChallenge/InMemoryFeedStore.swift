@@ -14,7 +14,8 @@ public final class InMemoryFeedStore: FeedStore {
 	public init() {}
 	
 	public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-		
+		cache = nil
+		completion(nil)
 	}
 	
 	public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
