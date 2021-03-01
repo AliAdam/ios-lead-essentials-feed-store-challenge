@@ -8,16 +8,19 @@
 
 import Foundation
 
-final class InMemoryFeedStore: FeedStore {
-	func deleteCachedFeed(completion: @escaping DeletionCompletion) {
+public final class InMemoryFeedStore: FeedStore {
+	
+	public init() {}
+
+	public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
 		
 	}
 	
-	func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
+	public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
 		
 	}
 	
-	func retrieve(completion: @escaping RetrievalCompletion) {
-		
+	public func retrieve(completion: @escaping RetrievalCompletion) {
+		completion(.empty)
 	}
 }
