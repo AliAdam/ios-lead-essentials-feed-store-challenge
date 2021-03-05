@@ -9,7 +9,7 @@
 import Foundation
 
 public final class InMemoryFeedStore: FeedStore {
-	typealias Cache = (feed: [LocalFeedImage], timestamp: Date)
+	private typealias Cache = (feed: [LocalFeedImage], timestamp: Date)
 	private var cache: Cache?
 	public init() {}
 	
